@@ -1,0 +1,131 @@
+@import "tailwindcss/tailwind.css";
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.header-bg {
+  background-image: url("https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/hero-banner.jpg");
+}
+* {
+  font-family: "Albert Sans", sans-serif;
+}
+
+:root {
+  --template-font: "Albert Sans", sans-serif;
+  --theme-primary-color: rgba(80, 68, 235, 1);
+  --secondary-color: #f36a07;
+  --text-color: #636d78;
+  --primary-light: rgba(59, 56, 235, 0.1);
+  --main-text-color: #2b2f3e;
+  --light-color: #f0f1f5;
+}
+
+:is(.elementor-section-wrap, [data-elementor-id]) > .e-con {
+  max-width: min(100%, var(--width));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.width_48 {
+  width: 48%;
+}
+.line-height-h2 {
+  line-height: 5rem !important;
+}
+
+.ticker {
+  background-image: url("https://crete.themepreview.xyz/home-one/wp-content/uploads/sites/2/2023/07/ticker-bg-1.png");
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ur-ticker {
+  animation: ticker 30s linear infinite;
+  padding-right: 100%;
+}
+
+/* Add this in your tailwind.css or custom css file */
+.text-primary {
+  color: #5044eb;
+}
+
+.bg-light-primary {
+  background-color: rgba(59, 56, 235, 0.1);
+}
+
+.cr-subtitle {
+  /* Add specific styles here */
+}
+
+/* Similarly, add any other required custom styles */
+
+.header-sticky {
+  transition: all 0.3s ease 0s;
+}
+
+.header-sticky.sticky-on {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--white-color);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  animation-duration: 0.5s;
+  animation-name: fadeInDown;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  background-color: white;
+  border-radius: 0;
+}
+
+.header-section {
+  position: relative;
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2 !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile-nav {
+    display: none;
+  }
+}
